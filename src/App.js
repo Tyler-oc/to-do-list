@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Button, Container, Form, Modal } from "react-bootstrap";
+import { useState } from "react";
+import AddItemModal from "./components/AddItemModal";
+import { useItem } from "./contexts/ItemContext";
 
 function App() {
+  const [showAddItemModal, setShowAddItemModal] = useState(false);
+  const { items } = useItem();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="my-4">
+      <Button onClick={() => setShowAddItemModal(true)}>Add Item</Button>
+      <div>
+        <ul>
+          {items.map((item) => {
+            return <li></li>;
+          })}
+        </ul>
+      </div>
+      <AddItemModal
+        show={showAddItemModal}
+        handleClose={() => setShowAddItemModal(false)}
+      />
+    </Container>
   );
 }
 
