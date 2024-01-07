@@ -14,7 +14,7 @@ export default function AddItemModal({ show, handleClose }) {
   }
 
   return (
-    <Container>
+    <div>
       <Modal show={show} onHide={handleClose}>
         <Form onSubmit={handleSubmit}>
           <Modal.Header closeButton>
@@ -33,6 +33,6 @@ export default function AddItemModal({ show, handleClose }) {
           </Modal.Body>
         </Form>
       </Modal>
-    </Container>
+    </div>
   );
 }

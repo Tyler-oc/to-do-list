@@ -1,0 +1,8 @@
+.crossed-line {
+    text-decoration: line-through;
+}
+
+p{
+    user-select: none;
+
+}
