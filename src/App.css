@@ -4,5 +4,21 @@
 
 p{
     user-select: none;
+    font-size: large;
+    display: list-item;
+}
 
+#background{
+    background-size: cover;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(43, 8, 126));
+    flex: auto;
+    height: 150vh;
+    margin: 0px;
+}
+
+#addButton{
+    font-size: larger;
+    text-align: center;
+    margin: auto;
+    display: flex;
 }
